@@ -1,0 +1,35 @@
+.container {
+    text-align: center;
+    margin: 100px auto;
+    height: 50vh;
+    background: rgb(216, 195, 195);
+    border: solid 1px rgb(226, 218, 220);
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: rgb(25, 25, 65);
+    box-shadow: 2px 2px 2px 3px rgb(82, 71, 73);
+    border-radius: 5px;
+    width: 22px;
+    margin:  100px auto;
+    background: rgb(255, 231, 231);
+    letter-spacing: 5px;
+}
+
+P {
+    margin: 0px 35vw;
+}
+
+
+
+@media (max-width: 991px) {
+    h2 {
+        width: 220px;
+        height: 65px;
+        margin: 90px auto;
+        font-size: 24px;
+    }
+}

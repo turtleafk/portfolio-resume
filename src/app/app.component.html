@@ -1,0 +1,28 @@
+<app-nav (pageClicked)="pageNamed($event)"></app-nav>
+  <div class="row">
+    <div 
+        class="col-xs-12" 
+        *ngIf="!notLoaded || page === 'home'">
+        <app-home></app-home>
+      </div>
+      <div 
+        class="col-xs-12" 
+        *ngIf="page === 'about'">
+        <app-about></app-about>
+      </div>
+      <div 
+        class="col-xs-12" 
+        *ngIf="page === 'portfolio'">
+        <app-portfolio></app-portfolio>
+      </div>
+      <div 
+        class="col-xs-12" 
+        *ngIf="page === 'blog'">
+        <app-blog></app-blog>
+      </div>
+      <div 
+        class="col-xs-12" 
+        *ngIf="page === 'contact'">
+        <app-contact></app-contact>
+      </div>
+  </div>
