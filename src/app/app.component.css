@@ -1,21 +1,9 @@
 * {
-    width: 100vw;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
 }
 
-@keyframes opacity {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-.col-xs-12 {
-    width: 100%;
-    animation-name: opacity;
-    animation-duration: 3s;
-}
-
-@media (max-width: 481px) {
-   
+.container {
+    width: 100vw;
 }

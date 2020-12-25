@@ -1,19 +1,25 @@
 <div class="container" #nav>
-    <div>
-        <h1>Antonio's Portfolio</h1>
+    <div class="row">
+        <div class="col-xs-12">
+            <header>
+                <div class="heading">
+                    <h1>Front End Developer</h1>
+                </div>
+                <div class="burger" (click)="toggleNav()" #burger>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#" (click)="pageRequest($event)">Home</a></li>
+                        <li><a href="#" (click)="pageRequest($event)">About</a></li>
+                        <li><a href="#" (click)="pageRequest($event)">Portfolio</a></li>
+                        <li><a href="#" (click)="pageRequest($event)">Blog</a></li>
+                        <li><a href="#" (click)="pageRequest($event)">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
     </div>
-    <div class="burger" (click)="toggleNav($event)"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    <nav class="drop-down" [ngStyle]="{'visibility': toggle == 'on' ? 'visible' : 'hidden'}">
-        <ul>
-            <li><a href="#" (click)="pageRequest($event)">Home</a></li>
-            <li><a href="#" (click)="pageRequest($event)">About</a></li>
-            <li><a href="#" (click)="pageRequest($event)">Portfolio</a></li>
-            <li><a href="#" (click)="pageRequest($event)">Blog</a></li>
-            <li><a href="#" (click)="pageRequest($event)">Contact</a></li>
-        </ul>
-        
-    </nav>
 </div>
