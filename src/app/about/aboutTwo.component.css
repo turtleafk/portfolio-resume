@@ -1,0 +1,225 @@
+/*global*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/*each sub section that hold items directly*/
+/*first sub section*/
+
+.sub-section-1 {
+    position: relative;
+}
+
+    .interview {
+        letter-spacing: 1px;
+        font-size: 16px;
+        color: rgb(144, 164, 255);
+        margin-top: 2px;
+    }
+
+.sub-section-2, .sub-section-3 {
+    margin-top: 100px;
+}
+
+/*second sub section*/
+.sub-section-4, .sub-section-5, .sub-section-6, .sub-section-7 {
+    border-top: solid 1px rgb(51, 51, 51);
+    margin-top: 100px;
+    padding-top: 80px;
+}
+
+figure {
+    flex: 1;
+    height: 450px;
+    width: 85%;
+    min-width: 550px;
+    margin: auto;
+    position: relative;
+}
+
+.exp-img {
+    background: url('/assets/images/prov-1.png') no-repeat, url('/assets/images/prov-2.png') no-repeat, url('/assets/images/prov-3.png') no-repeat;
+    background-position: center, center, center;
+    background-size: cover, cover, cover;
+    height: 90%;
+    width: 85%;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.exp-img:hover {
+    transform: scale(1.04, 1.02);
+}
+
+.exp-img-active {
+    animation: swap 4s ease infinite;
+}
+
+@keyframes swap {
+    0%, 100% {
+        background-size: 0%, cover, 0%;
+    }
+    32% {
+        background-size: 0%, cover, 0%;
+    }
+    33% {
+        background-size: 0%, 0%, cover;
+    }
+    65% {
+        background-size: 0%, 0%, cover;
+    }
+    66% {
+        background-size: cover, 0%, 0%;
+    }
+    99% {
+        background-size: cover, 0%, 0%;
+    }
+}
+
+    .exp-caption {
+        width: 85%;
+        margin: 2px auto 0;
+    }
+
+    .para li {
+        line-height: 30px;
+    }
+
+    .indent {
+        margin-left: 9px;
+        color: rgb(230, 217, 47);
+    }
+
+/*third sub section*/
+.para-skills {
+    display: flex;
+}
+    .skill-details {
+        background: rgb(32, 32, 32);
+        padding: 10px;
+    }
+
+    .skill-list {
+        padding: 20px;
+    }
+
+    .skill-details, .skill-list {
+        flex: 1;
+    }
+
+    .skill-list {
+        display: flex;
+    }
+    
+    .copy-skill-list {
+        display: flex;
+        flex: 1;
+    }
+
+    .skill-details ul {
+        width: 90%;
+        margin: auto;
+        padding: 0 10px 10px;
+    }
+
+    .skill-details li {
+        list-style-type: circle;
+        font-size: 16px;
+    }
+    /*icons*/
+    .icon {
+        flex: 1;
+        font-size: 40px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .icon-1::after {
+        font-family: FONTAWESOME;
+        content: '\f13b';
+        color: rgb(231, 170, 56);
+    }
+    .icon-2::after {
+        font-family: FONTAWESOME;
+        content: '\f38b';
+        color: rgb(35, 35, 206);
+    }
+    .icon-3::after {
+        font-family: FONTAWESOME;
+        content: '\f3b9';
+        color: yellow;
+    }
+    .icon-4::after {
+        font-family: FONTAWESOME;
+        content: '\f420';
+        color: red;
+    }
+    .icon-5::after {
+        font-family: FONTAWESOME;
+        content: '\f836';
+        color: rgb(150, 35, 150);
+    }
+    .icon-6::after {
+        font-family: FONTAWESOME;
+        content: '\f41e';
+        color: pink;
+    }
+    .icon-7::after {
+        font-family: FONTAWESOME;
+        content: '\f167';
+        color: blue;
+    }
+
+/*fourth sub section*/
+.cert {
+    width: 50%;
+    margin: 40px auto 10px;
+    padding: 10px;
+}
+
+@media (max-width: 1210px) {
+   figure {
+       width: 75%;
+   }
+
+   .exp-img {
+       height: 450px;
+   }
+
+   .sub-section-4 .para {
+       margin-top: 30px;
+   }
+
+   .sub-section-4 p, .sub-section ul {
+       width: 70%;
+       margin: auto;
+   }
+
+   .para-skills {
+       flex-direction: column-reverse;
+   }
+
+   .icon {
+       justify-content: center;
+   }
+
+   .skill-details li {
+       list-style-type: none;
+        text-align: center;
+   }
+
+   .cert {
+       width: 70%;
+   }
+}

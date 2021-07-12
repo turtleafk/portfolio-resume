@@ -1,19 +1,145 @@
 <div class="container">
     <div class="row">
-            <div class="col-md-4 about-text">
-                I am a Front-End Engineer, also known as a Front-End Developer, living in Austin, Texas. I began the process of learning to build websites 5 years ago when I watched a video of how virtual synthesizers were made. I was making music at the time, but when I seen that video I made the decision to learn how it works.</div>
-            <div class="col-md-8">
-                    <div class="image"></div>
-            </div>
+         <div class="col-xs-12">
+             <div class="bar">
+             </div>
+         </div>
     </div>
-    <hr>
+            <!--the header that is sticky-->
+            <div class="about">
+                <h3>{{ title }}</h3>
+            </div>
+
     <div class="row">
-            <div class="col-md-8">
-                    <div class="image2"></div>
+        <div class="col-xs-12">
+            <div class="main-nav-area">
+                <div (mouseover)="expandNav()" (mouseleave)="closeNav()" class="side-nav">
+                    <ul class="side-nav-list">
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Developer Experience</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Education</a></li>
+                        <!--link disabled until I have images-->
+                        <li><a href="#" style="pointer-events: none; text-decoration: line-through;">Gallery</a></li>
+                    </ul>
+                    <span class="nav-open-icon nav-icon"></span>
+                </div>
+                <div class="main-1 main-area">
+                    <!--What I love section-->
+                    <div class="sub-section-1 sub-section main">
+                        <div class="para">
+                            <h4>How I got into programming?</h4>
+                            <br>
+                            <p>I used to be a musician. It was my life, day in and day out I would spend hours working on sounds design.<br><br>
+                                In music production, you use a lot of software like VSTs (Virtual Synthesizers) and Plugins. I wanted to know more about a specific VST so I watched an interview with the creator, Steve Duda.<br><br>
+                                He talked about the way he actually made it, with coding, and I was really confused but intrigued at the same time. I thought it was the coolest thing to make code and alogrithms play a sound and then manipulate that sound. To create something from nothing, much like music, was amazing to me. From that point on, my path began to learn more about it.</p>
+                        </div>
+                        <figure>
+                            <img class="para-img" alt="steve duda interview about serum" title="steve duda interview" src="/assets/images/steve.png">
+                            <figcaption>Steve Duda <a class="interview" href="https://www.youtube.com/watch?v=Cp0rtLaXBio" target="_blank">interview</a> talking about music software with Ableton</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="sub-section-2 sub-section main">
+                        <figure>
+                            <img class="para-img" alt="computer workstation" title="work desk" src="/assets/images/d.jpg">
+                        </figure>
+                        <div class="para">
+                            <h4>What I love about Programming?</h4>
+                            <br>
+                            <p>Honestly, I have had a long battle with programming, a love and hate relationship if you will.<br><br>
+                                There were times when things became difficult and I was unsure if this was the path for me. It wasn't until I dove deep and started problem solving that I became aware that it wasn't the code, but the patterns and routing you create with it.<br><br>
+                                To create something and make it work sent a shock of happiness to me when I finally saved my code and seen it working in the local host. A problem I might have spent days on now working just got me excited to see what else I can do.</p>
+                        </div>
+                    </div>
+
+                    <div class="sub-section-3 sub-section main">
+                        <div class="para">
+                            <h4>Where do I see myself in 5 years?</h4>
+                            <br>
+                            <p>Within the next year I see myself working on a web development team as a Front-End Developer.<br><br>
+                                Between that time and 3 years from now, I envision myself working as a full-stack developer having learned the technologies needed for the back-end (I am currently learning Java and SQL). My goal being to fully understand the whole software/app creation process.<br><br>
+                                Also, I would like to be part of a small company, in comparison to Facebook, where I can be a part of the growth and something great!</p>
+                        </div>
+                        <figure>
+                            <img class="para-img" alt="software engineers working" title="people working" src="/assets/images/team.webp">
+                        </figure>
+                    </div>
+
+                    <!--developer exp section-->
+                    <div class="sub-section-4 sub-section main" *ngFor="let x of data">
+                        <figure>
+                            <div (mouseenter)="slideshow($event)" (mouseleave)="stopSlideshow($event)" class="exp-img"></div>
+                            <figcaption class="exp-caption"><a class="interview" href="{{ x.href }}" target="_blank">{{ x.link }}</a>{{ x.sentence }}</figcaption>
+                        </figure>
+                        <div class="para">
+                            <p>Employer: <span class="indent">{{ x.employer }}</span></p>
+                            <br>
+                            <p>Employment Type: <span class="indent">{{ x.type }}</span></p>
+                            <br>
+                            <p>Position: <span class="indent">{{ x.position }}</span></p>
+                            <br>
+                            <p>Date: <span class="indent">{{ x.date }}</span></p>
+                            <br>
+                            <p>Duties: </p>
+                            <ul>
+                                <li class="indent">{{ x.duty1 }}</li>
+                                <li class="indent">{{ x.duty2 }}</li>
+                                <li class="indent">{{ x.duty3 }}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--skills section-->
+                    <div class="sub-section-5 sub-section main">
+                        <div class="para para-skills" *ngFor="let b of skills">
+                            <div class="skill-details">
+                                <h4>{{ b.title }}</h4>
+                                <br>
+                                <ul>
+                                    <li *ngFor="let a of b.details">{{ a }}</li>
+                                </ul>
+                            </div>
+                            <div class="skill-list">
+                                <!--CSS icons-->
+                                <div class="copy-skill-list" *ngIf="b.title == 'Front-End'; else other">
+                                    <span title="HTML5" class="icon-1 icon"></span>
+                                    <span title="CSS3" class="icon-2 icon"></span>
+                                    <span title="JavaScript" class="icon-3 icon"></span>
+                                    <span title="Angular" class="icon-4 icon"></span>
+                                    <span title="Bootstrap" class="icon-5 icon"></span>
+                                </div>
+                                <ng-template #other>
+                                    <span title="Java" class="icon-7 icon"></span>
+                                </ng-template>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--education section-->
+                    <div class="sub-section-6 sub-section main">
+                            <div class="para">
+                                <!--cert style resume info goes here-->
+                                <h4>Certifications</h4>
+                                <div class="cert" *ngFor="let t of certs" #certs>
+                                    <p>{{ t.cert }}</p>
+                                    <p>{{ t.institute }}</p>
+                                    <p>{{ t.date }}</p>
+                                    <a class="interview" href="{{ t.link }}" target="_blank">credential</a>
+                                </div>
+                            </div>             
+                    </div>
+
+                    <!--gallery section-->
+                    <div class="sub-section-7 main">
+                        <div class="para">
+                            <h4>Gallery</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 about-text">
-                    My penultimate goal is to get involved in machine learning to study and help forge the way for the future of AI or AGI. These sytems would help improve the world by doing advanced computation at a faster rate than humans can, thus moving innovation at a faster rate. Also, I picture a system with millions of conditions interacting as humans.
-            </div>
+        </div>
     </div>
 </div>
     

@@ -1,8 +1,40 @@
 <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1>Currently working on a layout in Adobe XD for a project I am doing for someone and on creating a blog section here where I will post all updates and news.</h1>
-                <p>sdasdasdasdasdasd</p>
+            <div class="col-xs-12">
+               <div class="search">
+                   <label>Search Blog</label>
+                   <div class="search-bar">
+                       <input class="form-control" type="text">
+                        <button class="btn btn-default">Search</button>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 main">
+                <nav>
+                    <div class="categories">
+                        <h4>Categories</h4>
+                        <li><a href="#">-How to</a></li>
+                        <li><a href="#">-General</a></li>
+                        <li><a href="#">-Education</a></li>
+                        <li><a href="#">-Theory</a></li>
+                    </div>
+                    <div class="filter">
+                        <h4>Sort by</h4>
+                        <li><a href="#">-Recent first</a></li>
+                        <li><a href="#">-Oldest first</a></li>
+                        <li><a href="#">-Most popular</a></li>
+                    </div>
+                </nav>
+                <div class="list">
+                   <div class="labels">
+                        <p class="title">title</p>
+                        <p class="cat">category</p>
+                        <p class="date">date</p>
+                    </div>
+                    <app-blog-list *ngFor="let b of blogs" [article]="b"></app-blog-list> 
+                </div>
             </div>
         </div>
 </div>

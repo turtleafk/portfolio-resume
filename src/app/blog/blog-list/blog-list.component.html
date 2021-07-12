@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row blog-list" *ngIf="clicked == false">
+        <div class="col-xs-12 blog-area">
+            <div class="blog">
+                <h3 class="title" (click)="openBlog()">{{ article.title }}</h3>
+                <p class="cat">{{ article.category }}</p>
+                <p class="date">{{ article.date }}</p>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="row chosen-blog" *ngIf="clicked == true">
+        <div class="col-xs-12">
+            <a href="#" (click)="toList()">back</a>
+        </div>
+    </div>
+</div>

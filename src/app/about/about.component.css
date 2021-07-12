@@ -1,0 +1,148 @@
+/*global*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+    margin: auto;
+    width: 100%;
+    background: black;
+}
+
+ p {
+     color: white;
+ }
+
+ /*line on top*/
+ .bar {
+     background: rgb(22, 22, 22);
+     height: 1px;
+     width: 1700px;
+     margin: auto;
+ }
+
+ /*the heading*/
+ .about {
+     text-align: center;
+     margin-top: 80px;
+     width: calc(100% - 300px);
+     float: right;
+ }
+
+    .about h3 {
+        color: white;
+        font-size: 26px;
+    }
+
+/*each main section and all*/
+.main-area {
+    width: calc(100% - 300px);
+    border-left: solid 1px rgb(133, 133, 133);
+    
+}
+
+/*all divs under each main section, to apply to all*/
+.main {
+    padding: 10px;
+}
+
+.sub-section {
+    display: flex;
+}
+
+h4 {
+    font-size: 21px;
+    text-align: center;
+}
+
+    .main p {
+        font-size: 18px;
+    }
+
+figcaption {
+    font-size: 15px;
+    cursor: default;
+}
+
+.para {
+    flex: 1;
+    padding: 10px 40px 20px;
+}
+
+.para-img {
+    height: 90%;
+    width: 100%;
+    border: solid 1px rgb(39, 39, 39);
+}
+
+
+
+@media (max-width: 1720px) {
+    .row, .bar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1450px) {
+    .main-area {
+        width: 85%;
+        border-left: none;
+    }
+
+    .bar {
+        visibility: hidden;
+    }
+
+    .about {
+        width: 100%;
+        height: 65px;
+        float: none;
+        position: sticky;
+        top: 0px;
+        background: black;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: solid 1px rgb(51, 51, 51);
+    }
+}
+
+@media (max-width: 1325px) {
+    .main-area {
+        width: 90%;
+    }
+
+    .para {
+        padding: 0px 30px 20px;
+    }
+}
+
+@media (max-width: 1210px) {
+    .sub-section {
+        flex-direction: column;
+    }
+
+    .para {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 30px;
+        text-align: justify;
+    }
+}

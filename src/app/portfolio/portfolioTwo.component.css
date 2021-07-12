@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.7rem;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    letter-spacing: -1px;
+    color: white;
+}
+
+@media (max-width: 1040px) {
+    .main-content {
+        flex-direction: column;
+        height: 700px;
+        justify-content: start;
+        
+    }
+
+    .project-photo {
+        flex: 1.5;
+        margin: auto;
+        min-height: 400px;
+        max-height: 400px;
+    }
+
+    .project-info {
+        margin: 30px auto 0px;
+    }
+}
+
+@media (max-width: 580px) {
+    .project-photo {
+        min-width: 99%;
+    }
+
+    
+}
+
+@media (max-width: 450px) {
+    .project-info {
+        min-width: 99%;
+    }
+}

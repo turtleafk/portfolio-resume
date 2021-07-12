@@ -3,10 +3,127 @@
         <div class="col-xs-12">
             <div class="img">
                 <div class="tint">
-                    <p class="coffee">Coffee</p>
-                    <p class="sleep">Sleep</p>
-                    <p>Code</p>
+                    <p class="intro">Experience in building dynamic web sites</p>
+                    <p class="intro2">Check out the DevTV tab!</p>
+                    <p class="intro3">...for recorded project sessions.</p>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="designs">
+                <p class="first-p"><q>Every design is art and in art there is story</q></p>
+                <p class="second-p"><a href="#" (click)="pageRequested($event)">Take a look</a> at projects I have made!</p>
+            </div>
+            <p class="same">Some articles from my blog:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="content">
+                <div class="un" (mouseover)="slideUp($event)" (mouseleave)="slideDown()">
+                    <img src="/assets/images/res.jpg" alt="electronic devices">
+                    <div class="tint-un tinty">
+                        <p class="description">Designing websites to look the same on all devices.</p>
+                    </div>
+                </div>
+                <div class="duex" (mouseover)="slideUp($event)" (mouseleave)="slideDown()">
+                    <img src="/assets/images/res.jpg" alt="letters seo">
+                    <div class="tint-duex tinty">
+                        <p class="description">Check out how we use SEO to get to the top of search results.</p>
+                    </div>
+                </div>
+                <div class="trois" (mouseover)="slideUp($event)" (mouseleave)="slideDown()">
+                    <img src="/assets/images/res.jpg" alt="facebook logo">
+                    <div class="tint-trois tinty">
+                        <p class="description">Why websites are like department stores.</p>
+                    </div>
+                </div>
+                <div class="quatre" (mouseover)="slideUp($event)" (mouseleave)="slideDown()">
+                    <img src="/assets/images/res.jpg" alt="letters">
+                    <div class="tint-quatre tinty">
+                        <p class="description">Check out how we use SEO to get to the top of search results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="more">
+                <a href="#" (click)="pageRequested($event)">View blog</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="dev-tv">
+                <h1>Latest from <span class="dev">dev</span> TV</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="all-videos">
+                <h5>{{ title }}</h5>
+                <video 
+                    class="vid" 
+                    poster="{{ latestVideo.poster[0] }}" 
+                    controls
+                    controlslist="nodownload"
+                    playsinline="true" 
+                    preload="none"
+                    disablePictureinPicture>
+                    <source src="{{ latestVideo.src }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="more">
+                    <a href="#" (click)="pageRequested($event)">dev TV</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="how">
+                <h2>About Me? "Who?...Me?"</h2>
+                <div class="steps">
+                    <div class="step step-1">
+                        <div class="step-tint">
+                            <h4>Languages</h4>
+                            <p class="step-text">JavaScript<br>Angular<br>TypeScript<br>CSS3<br>HTML5</p>
+                        </div>
+                    </div>
+                    <div class="step step-2">
+                        <div class="step-tint">
+                            <h4>Libraries</h4>
+                            <p class="step-text">Bootstrap<br>jQuery<br>sasS</p>
+                        </div>
+                    </div>
+                    <div class="step step-3">
+                        <div class="step-tint">
+                            <h4>Tools</h4>
+                            <p class="step-text">Node NPM<br>GitHub Dekstop<br>Google Firebase<br>AWS Amplify<br>Adobe XD<br>Visual Studio Code</p>
+                        </div>
+                    </div>
+                    <div class="step step-4">
+                        <div class="step-tint">
+                            <h4>Experience with...</h4>
+                            <p class="step-text">REST APIs<br>AJAX<br>JSON<br>Object Oriented Programming<br>HTTP/Fetch</p>
+                        </div>
+                    </div>
+                    <div class="step step-5">
+                        <div class="step-tint">
+                            <h4>Certifications</h4>
+                            <p class="step-text">JavaScript Algorithms & Data Structures<br>Responsive Web Design<br>JavaScript: Build Real Projects</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" (click)="pageRequested($event)">Read More</a>
             </div>
         </div>
     </div>

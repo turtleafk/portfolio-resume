@@ -1,9 +1,139 @@
 * {
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    font-size: 1.7rem;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
 }
 
 .container {
-    width: 100vw;
+    width: 100%;
+    background: black;
+   
 }
+
+.footer {
+    width: 100%;
+}
+
+a {
+    color: white;
+}
+
+/*contact*/
+.row-contact {
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    top: 35vh;
+}
+
+    .contact {
+        background: rgb(207, 207, 207);
+        height: auto;
+        width: 240px;
+        padding: 10px 20px;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+    .main {
+        display: flex;
+    }
+
+    .contact-active {
+        display: block;
+    }
+
+    p::after {
+        font-family: FontAwesome;
+        content: "\f00d";
+        color: rgb(87, 87, 87);
+        cursor: pointer;
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        padding: 0 12px;
+    }
+
+    p:hover::after {
+        transform: scale(1.1);
+        color: red;
+    }
+
+    .btn-primary {
+        width: 80px;
+        margin-left: 14px;
+    }
+
+    .phone-input {
+        display: none;
+        color: rgb(87, 87, 87);
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .form-control-active {
+        display: block;
+    }
+
+
+
+/*login*/
+.login {
+    background: rgb(46, 46, 46);
+    position: fixed;
+    top: 35vh;
+    left: calc(50% - 150px);
+    width: 310px;
+    z-index: 4;
+    padding: 40px;
+    border-radius: 3px;
+    display: none;
+}
+
+.login-active {
+    display: block;
+}
+
+.form-group {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .label {
+        padding-right: 4px;
+        align-self: center;
+        overflow-y: hidden;
+        color: rgb(196, 196, 196);
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+
+    .input {
+        background: rgb(27, 27, 27);
+        width: 150px;
+        border: solid 1px rgb(26, 26, 26);
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+    }
+
+    .input:active {
+        box-shadow: none;
+    }
+
+    .btn-default {
+        border: solid 1px gray;
+        padding: 0px 3px;
+        font-size: 16px;
+    }
+
+    .guest-btn {
+        margin-left: 5px;
+    }

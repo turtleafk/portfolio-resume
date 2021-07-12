@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="dev-tv">
+                <h1 id="main">devTV</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="video-container">
+                <h6>{{ preTitle }}  {{ title }}</h6>
+                <video 
+                    class="main-video" 
+                    poster="{{ mainPoster }}" 
+                    src="{{ mainSource }}" 
+                    playsinline="true" 
+                    preload="metadata" 
+                    controls 
+                    controlslist="nodownload"
+                    disablePictureinPicture>
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="video-collection">
+                <h3>Past Videos</h3>
+                <select (change)="reorder()" name="filter">
+                    <option *ngFor="let y of choices" value="{{ y }}">{{ y }}</option>
+                </select>
+                <div class="video-list">
+                    <a (click)="playVideo($event)" href="#main" class="video-parent" *ngFor="let x of videos">
+                            <span class="length">{{ x.length }}</span>
+                            <span class="date">{{ x.when }}</span>
+                            <img (mouseenter)="allImages($event)" (mouseleave)="oneImage($event)" alt="video tutorial" title="{{ x.date | date }}" class="coll-img" src="{{ x.poster[0] }}">
+                            <span class="title">{{ x.title }}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

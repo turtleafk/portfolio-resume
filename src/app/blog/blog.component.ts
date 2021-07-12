@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BlogService } from './blog.service';
 
 @Component({
     selector: 'app-blog',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
     styleUrls: [`blog.component.css`]
 })
 
-export class BlogComponent {
+export class BlogComponent implements OnInit {
+    blogs: any;
+    
+    ngOnInit() {
+
+    }
+
+    constructor(private _blogService: BlogService) {
+        this.blogs = _blogService.getBlog();
+
+        //input is glitchy
+    }
 
 }

@@ -2,102 +2,143 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
 }
 
 li {
     list-style-type: none;
+    letter-spacing: 1px;
 }
 
 .container {
-    width: 100vw;
+    width: 1500px;
+    margin: auto;
+    overflow: hidden;
 }
 
 a {
-    color: rgb(45, 45, 46);
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(128, 128, 128);
 }
 
 
-/*header*/
+/*original state of header*/
 header {
-    height: 70px;
-    background: rgb(255, 255, 255);
+    height: 30px;
+    background: rgba(0, 0, 0, 0.795);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/*class that is applied to header*/
+.active-header-dk {
+    height: 65px;
+}
+
+
+.active-header-two {
+    height: 100vh;
+}
+
+.icon {
+    position: relative;
+    top: 33px;
+    left: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+}
+
+.dev {
+    color: rgb(51, 192, 173);
+    font-size: 16px;
 }
 
 /*Nav*/
 .nav {
     display: flex;
     flex-direction: column;
-    background: rgb(255, 255, 255);
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: -300px;
+    width: 600px;
+    position: absolute;
+    top: 35px;
+    right: 0px;
     z-index: 3;
-    transition: all 0.5s ease;
+    padding-left: 40px;
 }
-
-    .active-nav {
-        left: 0px;
-        transition: all 0.5s ease;
-    }
 
     ul {
         display: flex;
-        flex-direction: column;
         font-size: 18px;
-        line-height: 60px;
         position: relative;
-        top: 180px;
-        left: 20%;
-        height: 100%;  
+        top: 0;
+        gap: 50px;
     }
 
 
 .heading {
     height: 100%;
-    width: 100%;
+    width: 30%;
+    display: flex;
+    float: left;
 }
 
-    h1 {
-        font-family: Helvetica, sans-serif;
-        font-size: 26px;
-        color: rgb(0, 0, 0);
-        text-align: center;
+.translate {
+    display: none;
+}
+    
+
+    .translate p {
         display: flex;
-        justify-content: center;
-        margin: auto;
-        padding-top: 32px;
+        justify-content: flex-end;
+        position: relative;
+        right: 18px;
+        padding: 5px;
+        z-index: 3;
+    }
+
+    .translate a {
+        color: rgb(223, 217, 172);
     }
 
 /*burger div*/
 
 .burger {
-    width: 35px;
+    width: 30px;
     height: 30px; 
-    position: absolute;
+    position: fixed;
     top: 30px;
-    left: 15px;
+    right: 20px;
     cursor: pointer;
-    z-index: 4;
+    z-index: 999;
+    display: none;
+}
+
+.burger-active {
+    position: fixed;
 }
 
     .line {
-        background: rgb(27, 27, 27);
+        background: rgb(255, 255, 255);
         border-radius: 3px;
         margin-bottom: 4px;
-        width: 30px;
-        height: 3px;
+        width: 25px;
+        height: 2px;
         position: relative;
         top: 8px;
-        left: 5px;
-        transition: all 0.5s;
+        left: 2px;
     }
 
     .line-1 {
         transform: translateY(4px) rotate(-45deg);
         transition: all 0.5s ease;
+        background: rgb(207, 207, 207);
     }
 
     .line-2 {
@@ -106,8 +147,73 @@ header {
     }
 
     .line-3 {
-        transform: translateY(-10px) rotate(45deg);
+        transform: translateY(-8.5px) rotate(45deg);
         transition: all 0.5s ease;
+        background: rgb(207, 207, 207);
     }
 
 
+@media (max-width: 1720px) {
+    .container, header {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1450px) {
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        height: 0px;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        z-index: 999 !important;
+        top: 30px;
+        right: 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        background: rgb(0, 0, 0);
+        height: 0;
+        width: 100vw;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        visibility: hidden;
+        padding: 0;
+        z-index: 4 !important;
+        transition: all 0.2s ease;
+    }
+    
+        .active-nav {
+            position: fixed;
+            top: 0px;
+            height: 100vh;
+            visibility: visible;
+            transition: all 0.2s ease;
+            
+        }
+    
+        ul {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin: auto;
+            top: 70px;
+            height: 100vh;  
+            gap: 0px;
+            line-height: 12vh;
+            text-align: center;
+        }
+       
+}
+
+@media(max-width: 499px) {
+    .container {
+        overflow: scroll;
+    }
+}

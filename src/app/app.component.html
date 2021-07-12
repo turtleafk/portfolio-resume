@@ -4,39 +4,76 @@
       <app-nav (pageClicked)="pageNamed($event)"></app-nav>
     </div>
   </div>
+  <!--contact section is here-->
+  <div class="row row-contact">
+    <div class="col-md-12">
+        <div class="contact" #contactForm>
+          <div class="main">
+            <p (click)="exitContact(phone)"></p>
+            <button class="btn btn-primary" type="button"><a href="mailto:antonio330360@icloud.com">Email</a></button>
+            <button class="btn btn-primary" type="button" (click)="showPhone(phone)"><a href="#">Phone</a></button>
+          </div>
+          <span class="phone-input" #phone>{{ phoneNumber }}</span>
+        </div>
+      </div>
+  </div>
+  <!--login section is here-->
   <div class="row">
-    <div 
-        class="col-md-12" 
-        *ngIf="!notLoaded || page === 'home'">
-        <app-home></app-home>
+    <div class="col-md-12">
+      <div class="login" #loginForm>
+        <div class="form-group">
+          <label class="label" for="email">Email:</label>
+          <input class="input form-control" type="email">
+        </div>
+        <div class="form-group">
+          <label class="label" for="password">Password:</label>
+          <input class="input form-control" type="password">
+        </div>
+        <button class="btn-default" type="submit">Login</button>
+        <button class="btn-default guest-btn" (click)="exitLogin()">Continue as Guest</button>
+      </div>
     </div>
   </div>
   <div class="row">
     <div 
         class="col-md-12" 
-        *ngIf="page === 'about'">
+        *ngIf="!notLoaded || page === 'client dev'">
+        <app-home (pageClickedTwo)="pageNamedTwo($event)"></app-home>
+    </div>
+  </div>
+  <div class="row">
+    <div 
+        class="col-md-12" 
+        *ngIf="page === 'about me' || page === 'Read More'">
         <app-about></app-about>
     </div>
   </div>
   <div class="row">
+    <div
+        class="col-md-12"
+        *ngIf="page === 'dev tv' || page === 'dev TV'">
+        <app-tv></app-tv>
+    </div>
+  </div>
+  <div class="row">
     <div 
         class="col-md-12" 
-        *ngIf="page === 'portfolio'">
+        *ngIf="page === 'projects' || page === 'Take a look'">
         <app-portfolio></app-portfolio>
     </div>
   </div>
   <div class="row">
     <div 
         class="col-md-12" 
-        *ngIf="page === 'blog'">
+        *ngIf="page === 'blog' || page === 'View blog'">
         <app-blog></app-blog>
     </div>
   </div>
   <div class="row">
-    <div 
-        class="col-md-12" 
-        *ngIf="page === 'contact'">
-        <app-contact></app-contact>
+    <div class="col-xs-12">
+        <div class="footer">
+            <app-footer (pageClickedThree)="pageNamedThree($event)"></app-footer>
+        </div>
     </div>
   </div>
 </div>
