@@ -16,7 +16,7 @@ li {
 .container {
     width: 1500px;
     margin: auto;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 a {
@@ -31,6 +31,7 @@ a:hover {
 
 /*original state of header*/
 header {
+    width: 100vw;
     height: 30px;
     background: rgba(0, 0, 0, 0.795);
     transition: all 0.4s ease;
@@ -154,7 +155,7 @@ header {
 
 
 @media (max-width: 1720px) {
-    .container, header {
+    .container {
         width: 100%;
     }
 }
@@ -163,6 +164,7 @@ header {
     header {
         position: fixed;
         top: 0;
+        left: 0;
         z-index: 999;
         height: 0px;
     }
@@ -214,6 +216,6 @@ header {
 
 @media(max-width: 499px) {
     .container {
-        overflow: scroll;
+        overflow: hidden;
     }
 }

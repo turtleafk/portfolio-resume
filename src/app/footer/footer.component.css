@@ -85,7 +85,7 @@ a {
 /*email sub input thing*/
 
 .more-text {
-    height: 100px;
+    height: 130px;
     width: 1700px;
     margin: 10px auto 40px;
     border-top: solid 1px rgb(29, 29, 29);
@@ -112,6 +112,12 @@ a {
 @media (max-width: 1720px) {
     .more-text, .container {
         width: 95%;
+    }
+}
+
+@media (max-width: 420px) {
+    .sub-input {
+        width: 70%;
     }
 }
 

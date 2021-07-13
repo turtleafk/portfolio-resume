@@ -31,7 +31,7 @@
 }
 
 /*second sub section*/
-.sub-section-4, .sub-section-5, .sub-section-6, .sub-section-7 {
+.sub-section-4, .sub-section-5, .sub-section-6 {
     border-top: solid 1px rgb(51, 51, 51);
     margin-top: 100px;
     padding-top: 80px;
@@ -98,7 +98,7 @@ figure {
 
     .indent {
         margin-left: 9px;
-        color: rgb(230, 217, 47);
+        color: rgb(228, 218, 86);
     }
 
 /*third sub section*/
@@ -110,16 +110,13 @@ figure {
         padding: 10px;
     }
 
-    .skill-list {
-        padding: 20px;
-    }
-
     .skill-details, .skill-list {
         flex: 1;
     }
 
     .skill-list {
         display: flex;
+        padding: 20px;
     }
     
     .copy-skill-list {
@@ -134,7 +131,6 @@ figure {
     }
 
     .skill-details li {
-        list-style-type: circle;
         font-size: 16px;
     }
     /*icons*/
@@ -215,11 +211,117 @@ figure {
    }
 
    .skill-details li {
-       list-style-type: none;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
    }
 
    .cert {
        width: 70%;
    }
+}
+
+@media (max-width: 950px) {
+    figure {
+        width: 80%;
+    }
+
+    .exp-img, .exp-caption {
+        width: 100%;
+    }
+
+    .sub-section-4 p, .sub-section-4 ul {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill-details ul {
+        width: 95%;
+        padding: 0 0px 10px;
+    }
+}
+
+@media (max-width: 817px) {
+    .skill-details ul {
+        width: 98%;
+    }
+
+    .cert {
+        width: 95%;
+    }
+
+    figure {
+        width: 90%;
+        min-width: unset;
+        min-height: 300px;
+    }
+
+    .exp-img {
+        height: 400px;
+    }
+
+    .exp-img:hover {
+        transform: scale(1.02, 1.02);
+    }
+}
+
+@media(max-width: 600px) {
+    figure {
+        min-height: 75%;
+        width: 95%;
+    }
+
+    .exp-img {
+        height: 32rem;
+    }
+
+    .sub-section-4 li {
+        padding-top: 15px;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .skill-details {
+        width: auto;
+        padding: 5px;
+    }
+
+    .skill-details li {
+        text-align: left;
+        padding-bottom: 17px;
+        line-height: 22px;
+    }
+
+    .skill-list {
+        padding: 20px 0;
+    }
+
+    .cert {
+        width: 98%;
+    }
+
+    .cert p, .cert a {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .exp-img {
+        height: 28rem;
+    }
+
+    .exp-caption {
+        width: 99%;
+    }
+
+    .icon {
+        font-size: 36px;
+    }
+
+    .skill-details li {
+        text-align: center;
+    }
 }

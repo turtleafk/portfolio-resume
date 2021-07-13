@@ -17,7 +17,7 @@ export class AboutService {
                 ['/assets/images/prov-1.png', '/assets/images/prov-2.png', '/assets/images/prov-3.png'],
                 'https://prov-3ac54.firebaseapp.com/',
                 'Website',
-                ' design for providom financial advice org',
+                ' design for providom financial advice organization',
                 'Providom non-profit Org',
                 'Volunteer',
                 'Web Design/UI Developer',
@@ -33,11 +33,11 @@ export class AboutService {
             new Skills(
                 'Front-End',
                 [
-                    'HTML5 for accessibility and SEO', 
-                    'CSS3 for responsiveness', 
-                    'JS(ES6) for functioning Front-End and integrating with APIs', 
-                    'Angular for fast development, organization, and strict type-checking',
-                    'Bootstrap for rapid UI Design'    
+                    '- HTML5 for accessibility and SEO', 
+                    '- CSS3 for responsiveness', 
+                    '- JS(ES6) for functioning Front-End and integrating with APIs', 
+                    '- Angular for fast development, organization, and strict type-checking',
+                    '- Bootstrap for rapid UI Design'    
                 ],
                 [
                     {

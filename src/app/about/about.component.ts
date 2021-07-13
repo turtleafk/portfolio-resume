@@ -1,4 +1,4 @@
-import { style } from '@angular/animations';
+
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { __classPrivateFieldSet } from 'tslib';
 import { AboutService } from './about.service';
@@ -22,12 +22,13 @@ export class AboutComponent implements AfterViewInit {
     this.data = this._aboutService.getData();
     this.certs = this._aboutService.getCerts();
 
-    //fix the responsiveness first
     //get the name to put in the header from the links themselves
     //find a way other than scroll event to link the passing by of sections
     //now only change the title when the screen is below 1450px
-    //and only change the nav link highlighted text when it is about 1450px
+    //and only change the nav link highlighted text when it is above 1450px
     //fix how the side nav goes below the footer mark
+    //enable side nav links to be clcikable and close when a link is clicked
+    //also on touch when a user touches outside the nav it closes
   }
 
   ngAfterViewInit() {

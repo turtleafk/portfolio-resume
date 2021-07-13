@@ -46,8 +46,6 @@ export class HomeComponent implements OnInit {
     this.videoService = this._videoService.getVideos();
     this.latestVideo = this.videoService[0];
     this.title = this.videoService[0].title;
-
-    //fix the overflow in the about section
   }
 
   ngOnInit(): void {

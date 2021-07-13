@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-xs-12">
       <app-nav (pageClicked)="pageNamed($event)"></app-nav>
     </div>
   </div>
   <!--contact section is here-->
   <div class="row row-contact">
-    <div class="col-md-12">
+    <div class="col-xs-12">
         <div class="contact" #contactForm>
           <div class="main">
             <p (click)="exitContact(phone)"></p>
@@ -19,7 +19,7 @@
   </div>
   <!--login section is here-->
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-xs-12">
       <div class="login" #loginForm>
         <div class="form-group">
           <label class="label" for="email">Email:</label>
@@ -35,36 +35,32 @@
     </div>
   </div>
   <div class="row">
-    <div 
-        class="col-md-12" 
+    <div class="col-xs-12" 
         *ngIf="!notLoaded || page === 'client dev'">
         <app-home (pageClickedTwo)="pageNamedTwo($event)"></app-home>
     </div>
   </div>
   <div class="row">
-    <div 
-        class="col-md-12" 
+    <div class="col-xs-12" 
         *ngIf="page === 'about me' || page === 'Read More'">
         <app-about></app-about>
     </div>
   </div>
   <div class="row">
-    <div
-        class="col-md-12"
+    <div class="col-xs-12"
         *ngIf="page === 'dev tv' || page === 'dev TV'">
         <app-tv></app-tv>
     </div>
   </div>
   <div class="row">
-    <div 
-        class="col-md-12" 
+    <div class="col-xs-12" 
         *ngIf="page === 'projects' || page === 'Take a look'">
         <app-portfolio></app-portfolio>
     </div>
   </div>
   <div class="row">
     <div 
-        class="col-md-12" 
+        class="col-xs-12" 
         *ngIf="page === 'blog' || page === 'View blog'">
         <app-blog></app-blog>
     </div>

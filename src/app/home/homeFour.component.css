@@ -1,3 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+}
+
 .dev-tv {
     width: 1700px;
     margin: auto;
@@ -23,7 +33,6 @@
     margin: auto;
     width: 1700px;
     display: flex;
-    overflow: hidden;
     visibility: hidden;
     opacity: 0;
 }
@@ -50,12 +59,12 @@ img {
     height: 100%;
     width: 100%;
     transition: all 1.5s ease;
-    background-size: auto;
 }
 
 .un, .duex, .trois, .quatre {
     position: relative;
     cursor: pointer;
+    width: 100%;
 }
 
 .active-div {
@@ -114,8 +123,9 @@ img {
     }
 }
 
-@media (max-width: 500px) {
+@media(max-width: 517px) {
     .content {
+        min-width: unset;
         width: 100%;
     }
 }
